@@ -90,27 +90,22 @@
 #Challenge for Nikolay
 # https://edabit.com/challenge/fNQEi9Y2adsERgn98
 
+from math import sqrt
 
 
+def perimator(point):
+    # I will need to calaculate the distance of the actuall points
+    # the formula d = √(x2 - x1)^2 + (y2 - y1)^2 will do it
 
+    AB = sqrt(((point[1][0] - point[0][0]) ** 2) +
+              ((point[1][1] - point[0][1]) ** 2))
 
+    BC = sqrt(((point[2][0] - point[1][0]) ** 2) +
+              ((point[2][1] - point[1][1]) ** 2))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    AC = sqrt(((point[2][0] - point[0][0]) ** 2) +
+              ((point[2][1] - point[0][1]) ** 2))
+    return round(AC + BC + AB, 2)
 
 #Challenge for Cooper
 # https://edabit.com/challenge/Xkc2iAjwCap2z9N5D
